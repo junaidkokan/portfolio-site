@@ -1,0 +1,157 @@
+
+/* By CSS here is for the mobile version of the website.
+   Media queries take care of the responsiveness for ipad and desktop version */
+* {
+  /* UNcomment the line below to see the html box model*/
+   /*outline: 1px solid red !important;*/
+   box-sizing: border-box;
+}
+
+/* To keep the link always blue and avoid turning to red when clicked */
+a:link, a:visited {
+    color: blue;
+}
+
+
+/* Styling the text except the name and decription of the developer */
+.all-projects, .portfolio-heading {
+  text-align: center;
+  text-transform: capitalize;
+  font-family: 'Helvatica', sans-serif;
+  font-weight: bolder;
+  font-size: medium;
+}
+
+/* Text colors added */
+.portfolio-heading {
+  color: #7d97ad;
+}
+
+.all-projects {
+  color: #2d3c49;
+}
+
+/* logo size fixed */
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+}
+
+/* Header styling */
+#header {
+  text-align: center;
+  font-family: 'Rajdhani', sans-serif;
+  text-transform: uppercase;
+}
+
+/* adding font weight to developer name*/
+.developer-name {
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+/* adding font weight to developer description*/
+.developer-subtitle {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+/* main image is 100% size for mobile version*/
+.main-image{
+  width: 100%;
+  max-height: 500px;;
+}
+
+.project-images {
+  width: 100%;
+  height: 200px;
+}
+
+.project-name {
+  margin: 0;
+}
+
+.project-link {
+  margin-top: 5px;;
+  margin-bottom: 30px;
+}
+
+/* iPad setting */
+@media screen and (min-width: 420px) and (max-width: 850px){
+
+  /* Making logo and name appear side by side */
+  #header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .name-description {
+    float: right;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  /* Adjusting projects dynamically to flex with screen size*/
+  .all-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* project images can grow to max 300px only */
+  .project-images {
+    max-width: 300px;
+  }
+
+  .project {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+/* Desktop version */
+@media screen and (min-width: 851px) {
+  #header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .name-description {
+    float: right;
+  }
+
+ .logo {
+   margin-left: 0;
+ }
+
+ .all-projects {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+ }
+
+  .project-images {
+    max-width: 300px;
+  }
+
+  .project {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  /*max size of main image*/
+  .main-image {
+    max-width: 1200px;
+  }
+
+  /* Setting max size of body and centering it in the browser */
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+}
